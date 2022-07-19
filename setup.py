@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="restconf-cli",
-    version="0.1.0",
+    version="0.1.1",
     description='command line tool for restconf',
     author='Muhammad Rafi',
     author_email='murafi@cisco.com',
