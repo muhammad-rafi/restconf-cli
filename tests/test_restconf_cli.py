@@ -4,22 +4,11 @@ from click.testing import CliRunner
 import unittest
 import requests
 from restconf_cli import restconf_cli
-from prompt import prompt
 
 
 # Disable InsecureRequestWarning: Unverified HTTPS request is being made.
 requests.packages.urllib3.disable_warnings()
 password = 'C1sco12345'
-
-
-# This test case is only for prompt testing, please ignore
-class PromptTestCase(unittest.TestCase):
-
-    def test_prompt(self):
-        runner = CliRunner()
-        result = runner.invoke(prompt, input='Rafi\n')
-        assert not result.exception
-        assert result.output == 'Name: Rafi\nHello Rafi\n'
 
 
 class RestconfCliRestconfGetTests(unittest.TestCase):

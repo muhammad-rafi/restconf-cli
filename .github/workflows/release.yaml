@@ -24,6 +24,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
+            Releasing Beta Version as it still 
+            requires testing.
           draft: false
           prerelease: false
   deploy:
