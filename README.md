@@ -372,4 +372,5 @@ Please raise an issue or pull request if you find something wrong with this modu
 
 ## References
 https://click.palletsprojects.com/en/8.1.x/
+
 https://click.palletsprojects.com/en/7.x/changelog/#version-7-1-2
