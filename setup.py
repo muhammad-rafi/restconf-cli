@@ -20,7 +20,7 @@ classifiers = [
 
 setup(
     name="restconf-cli",
-    version="0.1.3",
+    version="0.1.4",
     description='command line tool for restconf',
     long_description=long_description,
     long_description_content_type='text/markdown',

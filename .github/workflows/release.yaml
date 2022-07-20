@@ -24,7 +24,10 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            Fixed help text for the commands 
+            - Fixed typos in the code
+            - Added Status code to be displayed for GET command.
+            - Added file name to be appeared 
+              on the terminal when --output flag is supplied.
           draft: false
           prerelease: false
   deploy:

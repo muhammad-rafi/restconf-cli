@@ -359,6 +359,10 @@ Password:
 {
   "Cisco-IOS-XE-native:version": "17.3"
 }
+
+
+Status: 200 OK
+
 ```
 The output will be colorful as `restconf-cli` cli uses the rich module to print colorful output.
 
