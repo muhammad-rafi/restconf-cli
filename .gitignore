@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/*
 tests/__pycache__
+.DS_Store
 restconf_cli.egg-info/*
 *.json
 *.xml

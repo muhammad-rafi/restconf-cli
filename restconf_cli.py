@@ -83,8 +83,10 @@ def restconf_get(hostname, username, password, path, port, accept, content_type,
                                 verify=False)
         if response.status_code == 200:
             click.echo(print(f'{response.text}'))
+            click.echo(print(f"\nStatus: {response.status_code} OK"))
             if output:
                 click.echo(f'{response.text}', file=output)
+                click.echo(print(f'Output has been saved to a file "{output.name}"\n'))
         else:
             click.echo(print(f"\nRequest Failed: {response}"))
 
@@ -153,7 +155,7 @@ def restconf_post(hostname, username, password, path, port, data, from_file, acc
                                  data=payload,
                                  verify=False)
         if (response.status_code == 201):
-            click.echo(print(f"\nPost operational has been successful: {response.status_code} OK"))
+            click.echo(print(f"\nResource has been created successfully: {response.status_code} OK"))
         else:
             click.echo(print(f"\nRequest Failed: {response}"))
 
