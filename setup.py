@@ -23,6 +23,7 @@ setup(
     version="0.1.2",
     description='command line tool for restconf',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Muhammad Rafi',
     author_email='murafi@cisco.com',
     url='https://github.com/muhammad-rafi/restconf-cli',

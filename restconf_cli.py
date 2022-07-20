@@ -28,9 +28,11 @@ def restconf_cli():
     therefore, you will retrieve the output in following formats
     for the below type of devices unless specified for the GET operation.
     \b
-    IOSXE --> JSON
-    NSO --> JSON
-    NXOS --> XML
+    | Device Type           |            IOSXE             |              NXOS            |             NSO             |
+    | :-------------------: | :--------------------------: | :--------------------------: | :-------------------------: |
+    | Default Accept        |  application/yang-data+json  |  application/yang-data+json  | application/yang-data+json  |
+    | Default Content-Type  |  application/yang-data+json  |  application/yang-data+json  | application/yang-data+json  |
+    | Default Output Format |            JSON              |              XML             |             JSON            |
     \b
     Same for the POST, PUT and PATCH operation if you do not specify the
     header fields, it assumes you are sending the data in the formats
@@ -57,18 +59,18 @@ def restconf_get(hostname, username, password, path, port, accept, content_type,
     Method to retrieve operational or config data from the devices. \n
     Default header for the requests are 'application/yang-data+json'
 
-    Example:\n
+    Examples:\n
     \b
-    # Display output on the terminal
-    $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com \
-    -p Cisco-IOS-XE-native:native/version \
-    -a application/yang-data+json \
-    -c application/yang-data+json
+    # Display output on the terminal \b
+    $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
+    -p Cisco-IOS-XE-native:native/version \ \b
+    -a application/yang-data+json \ \b
+    -c application/yang-data+json \b
     \b
-    # Display output on the terminal and save the output on a file defined with --output or -o flag
-    $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com \
-    -p Cisco-IOS-XE-native:native/interface \
-    -o output.json
+    # Display output on the terminal and save the output on a file defined with --output or -o flag \b
+    $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
+    -p Cisco-IOS-XE-native:native/interface \ \b
+    -o interfaces.json
     """
     try:
         headers = {'Accept': accept, 'Content-Type': content_type}
@@ -108,9 +110,9 @@ def restconf_post(hostname, username, password, path, port, data, from_file, acc
     \b
     Example:
     \b
-    # Configure via raw data
-    $ restconf-cli POST -u developer -n sandbox-iosxe-latest-1.cisco.com \
-    -p ietf-interfaces:interfaces \
+    # Configure via raw data for POST operation
+    $ restconf-cli POST -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
+    -p ietf-interfaces:interfaces \ \b
     -d '{
     "interface":[
         {
@@ -130,9 +132,9 @@ def restconf_post(hostname, username, password, path, port, data, from_file, acc
         ]
       }'
     \b
-    # Configure from file
-    $ restconf-cli POST -u developer \
-    -n sandbox-iosxe-latest-1.cisco.com \
+    # Configure from file for POST operation
+    $ restconf-cli POST -u developer \ \b
+    -n sandbox-iosxe-latest-1.cisco.com \ \b
     -p ietf-interfaces:interfaces -ff interface.json
     '''
     try:
@@ -177,9 +179,9 @@ def restconf_put(hostname, username, password, path, port, data, from_file, acce
     \b
     Example:
     \b
-    # Configure via raw data
-    $ restconf-cli PUT -u developer -n sandbox-iosxe-latest-1.cisco.com \
-    -p ietf-interfaces:interfaces \
+    # Configure via raw data for PUT operation
+    $ restconf-cli PUT -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
+    -p ietf-interfaces:interfaces \ \b
     -d '{
     "interface":[
         {
@@ -199,9 +201,9 @@ def restconf_put(hostname, username, password, path, port, data, from_file, acce
         ]
       }'
     \b
-    # Configure from file
-    $ restconf-cli PUT -u developer \
-    -n sandbox-iosxe-latest-1.cisco.com \
+    # Configure from file for PUT operation
+    $ restconf-cli PUT -u developer \ \b
+    -n sandbox-iosxe-latest-1.cisco.com \ \b
     -p ietf-interfaces:interfaces/interface=Loopback999 -ff interface.json
     '''
     try:
@@ -247,9 +249,9 @@ def restconf_patch(hostname, username, password, path, port, data, from_file, ac
     \b
     Example:
     \b
-    # Configure via raw data
-    $ restconf-cli PATCH -u developer -n sandbox-iosxe-latest-1.cisco.com \
-    -p ietf-interfaces:interfaces \
+    # Configure via raw data for PATCH operation
+    $ restconf-cli PATCH -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
+    -p ietf-interfaces:interfaces \ \b
     -d '{
     "interface":[
         {
@@ -269,9 +271,9 @@ def restconf_patch(hostname, username, password, path, port, data, from_file, ac
         ]
       }'
     \b
-    # Configure from file
-    $ restconf-cli PATCH -u developer \
-    -n sandbox-iosxe-latest-1.cisco.com \
+    # Configure from file for PATCH operation
+    $ restconf-cli PATCH -u developer \ \b
+    -n sandbox-iosxe-latest-1.cisco.com \ \b
     -p ietf-interfaces:interfaces/interface=Loopback999 -ff interface.json
     '''
     try:
@@ -314,7 +316,7 @@ def restconf_delete(hostname, username, password, path, port, accept, content_ty
     \b
     Example:
     \b
-    $ restconf-cli DELETE -u developer -n sandbox-iosxe-latest-1.cisco.com \
+    $ restconf-cli DELETE -u developer -n sandbox-iosxe-latest-1.cisco.com \ \b
     -p ietf-interfaces:interfaces/interface=Loopback999
     '''
     try:

@@ -1,4 +1,4 @@
-name: Release Python Package on PyPi
+name: Release Status
 
 on:
   push:
@@ -24,8 +24,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            Releasing Beta Version as it still 
-            requires testing.
+            Beta Version. 
+            Fixed help text for the commands 
           draft: false
           prerelease: false
   deploy:

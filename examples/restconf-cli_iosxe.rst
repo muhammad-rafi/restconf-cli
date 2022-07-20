@@ -1,8 +1,3 @@
-
-$ python restconf_cli.py GET -u developer -n sandbox-iosxe-latest-1.cisco.com -p Cisco-IOS-XE-native:native/version
-
-$ restconf-cli GET -u admin -n sandbox-nxos-1.cisco.com -p Cisco-NX-OS-device:System/showversion-items -a application/yang.data+json -c application/yang.data+json
-
 $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com -p Cisco-IOS-XE-native:native/interface
 
 $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com -p ietf-interfaces:interfaces/interface=Loopback999
@@ -11,7 +6,8 @@ $ restconf-cli GET -u developer -n sandbox-iosxe-latest-1.cisco.com -p Cisco-IOS
 
 $ restconf-cli DELETE -u developer -n sandbox-iosxe-latest-1.cisco.com -p ietf-interfaces:interfaces/interface=Loopback999
 
-# POST operation via raw data 
+### POST operation via raw data 
+
 '''bash
 $ restconf-cli POST --username developer --hostname sandbox-iosxe-latest-1.cisco.com \
 --path ietf-interfaces:interfaces \
@@ -36,7 +32,8 @@ $ restconf-cli POST --username developer --hostname sandbox-iosxe-latest-1.cisco
 '''
 
 '''
-# POST operation via file 
+### POST operation via file 
+
 $ restconf-cli POST --username developer --hostname sandbox-iosxe-latest-1.cisco.com \
 --path ietf-interfaces:interfaces --from-file output.json
 '''
