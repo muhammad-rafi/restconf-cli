@@ -24,7 +24,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            Beta Version. 
             Fixed help text for the commands 
           draft: false
           prerelease: false
