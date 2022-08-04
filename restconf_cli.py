@@ -50,8 +50,8 @@ def restconf_cli():
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=False, help="Password for restconf api")
 @click.option("--path", "-p", type=str, required=True, help="Path for restconf api call")
 @click.option("--port", "-pn", type=int, required=False, default=443, help="Port number for restconf api, default is 443")
-@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept hearder for restconf api, default is application/yang-data+json")
-@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type hearder for restconf api, default is application/yang-data+json")
+@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept header for restconf api, default is application/yang-data+json")
+@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type header for restconf api, default is application/yang-data+json")
 @click.option("--output", "-o", type=click.File('w'), required=False, default=None, help="Output will be written to a file")
 @click.command(name="GET", context_settings=dict(help_option_names=['-h', '--help']))
 def restconf_get(hostname, username, password, path, port, accept, content_type, output):
@@ -100,8 +100,8 @@ def restconf_get(hostname, username, password, path, port, accept, content_type,
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=False, help="Password for restconf api")
 @click.option("--path", "-p", type=str, required=True, help="Path for restconf api call")
 @click.option("--port", "-pn", type=int, required=False, default=443, help="Port number for restconf api, default is 443")
-@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept hearder for restconf api, default is application/yang-data+json")
-@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type hearder for restconf api, default is application/yang-data+json")
+@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept header for restconf api, default is application/yang-data+json")
+@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type header for restconf api, default is application/yang-data+json")
 @click.option("--data", "-d", type=str, default='', help="Playload to be sent for POST, PUT and PATCH methods")
 @click.option("--from-file", "-ff", type=click.File('r'), required=False, default=None, help="Read the playload from file for POST operation")
 @click.command(name="POST", context_settings=dict(help_option_names=['-h', '--help']))
@@ -154,7 +154,7 @@ def restconf_post(hostname, username, password, path, port, data, from_file, acc
                                  headers=headers,
                                  data=payload,
                                  verify=False)
-        if (response.status_code == 201):
+        if response.status_code == 201:
             click.echo(print(f"\nResource has been created successfully: {response.status_code} OK"))
         else:
             click.echo(print(f"\nRequest Failed: {response}"))
@@ -169,8 +169,8 @@ def restconf_post(hostname, username, password, path, port, data, from_file, acc
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=False, help="Password for restconf api")
 @click.option("--path", "-p", type=str, required=True, help="Path for restconf api call")
 @click.option("--port", "-pn", type=int, required=False, default=443, help="Port number for restconf api, default is 443")
-@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept hearder for restconf api, default is application/yang-data+json")
-@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type hearder for restconf api, default is application/yang-data+json")
+@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept header for restconf api, default is application/yang-data+json")
+@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type header for restconf api, default is application/yang-data+json")
 @click.option("--data", "-d", type=str, default='', help="Playload to be sent for POST, PUT and PATCH methods")
 @click.option("--from-file", "-ff", type=click.File('r'), required=False, default=None, help="Read the playload from file for PUT operation")
 @click.command(name="PUT", context_settings=dict(help_option_names=['-h', '--help']))
@@ -223,7 +223,7 @@ def restconf_put(hostname, username, password, path, port, data, from_file, acce
                                  headers=headers,
                                  data=payload,
                                  verify=False)
-        if (response.status_code == 204):
+        if response.status_code == 204:
             click.echo(print(f"\nResource has been created/updated successfully: {response.status_code} OK"))
         else:
             click.echo(print(f"\nRequest Failed: {response}"))
@@ -238,8 +238,8 @@ def restconf_put(hostname, username, password, path, port, data, from_file, acce
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=False, help="Password for restconf api")
 @click.option("--path", "-p", type=str, required=True, help="Path for restconf api call")
 @click.option("--port", "-pn", type=int, required=False, default=443, help="Port number for restconf api, default is 443")
-@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept hearder for restconf api, default is application/yang-data+json")
-@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type hearder for restconf api, default is application/yang-data+json")
+@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept header for restconf api, default is application/yang-data+json")
+@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type header for restconf api, default is application/yang-data+json")
 @click.option("--data", "-d", type=str, default='', help="Playload to be sent for POST, PUT and PATCH methods")
 @click.option("--from-file", "-ff", type=click.File('r'), required=False, default=None, help="Read the playload from file for PATCH operation")
 @click.command(name="PATCH", context_settings=dict(help_option_names=['-h', '--help']))
@@ -293,7 +293,7 @@ def restconf_patch(hostname, username, password, path, port, data, from_file, ac
                                  headers=headers,
                                  data=payload,
                                  verify=False)
-        if (response.status_code == 204):
+        if response.status_code == 204:
             click.echo(print(f"\nResource has been updated successfully: {response.status_code} OK"))
         else:
             click.echo(print(f"\nRequest Failed: {response}"))
@@ -309,8 +309,8 @@ def restconf_patch(hostname, username, password, path, port, data, from_file, ac
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=False, help="Password for restconf api")
 @click.option("--path", "-p", type=str, required=True, help="Path for restconf api call")
 @click.option("--port", "-pn", type=int, required=False, default=443, help="Port number for restconf api, default is 443")
-@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept hearder for restconf api, default is application/yang-data+json")
-@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type hearder for restconf api, default is application/yang-data+json")
+@click.option("--accept", "-a", type=str, required=False, default='application/yang-data+json', help="Accept header for restconf api, default is application/yang-data+json")
+@click.option("--content-type", "-c", type=str, required=False, default='application/yang-data+json', help="Content-Type header for restconf api, default is application/yang-data+json")
 def restconf_delete(hostname, username, password, path, port, accept, content_type):
     '''
     Method to delete the target resource

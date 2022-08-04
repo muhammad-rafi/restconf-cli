@@ -124,10 +124,10 @@ Usage: restconf-cli GET [OPTIONS]
 
 Options:
   -o, --output FILENAME    Output will be written to a file
-  -c, --content-type TEXT  Content-Type hearder for restconf api, default is
+  -c, --content-type TEXT  Content-Type header for restconf api, default is
                            application/yang-data+json
 
-  -a, --accept TEXT        Accept hearder for restconf api, default is
+  -a, --accept TEXT        Accept header for restconf api, default is
                            application/yang-data+json
 
   -pn, --port INTEGER      Port number for restconf api, default is 443
@@ -182,10 +182,10 @@ Options:
   -d, --data TEXT            Playload to be sent for POST, PUT and PATCH
                              methods
 
-  -c, --content-type TEXT    Content-Type hearder for restconf api, default is
+  -c, --content-type TEXT    Content-Type header for restconf api, default is
                              application/yang-data+json
 
-  -a, --accept TEXT          Accept hearder for restconf api, default is
+  -a, --accept TEXT          Accept header for restconf api, default is
                              application/yang-data+json
 
   -pn, --port INTEGER        Port number for restconf api, default is 443
@@ -240,10 +240,10 @@ Options:
   -d, --data TEXT            Playload to be sent for POST, PUT and PATCH
                              methods
 
-  -c, --content-type TEXT    Content-Type hearder for restconf api, default is
+  -c, --content-type TEXT    Content-Type header for restconf api, default is
                              application/yang-data+json
 
-  -a, --accept TEXT          Accept hearder for restconf api, default is
+  -a, --accept TEXT          Accept header for restconf api, default is
                              application/yang-data+json
 
   -pn, --port INTEGER        Port number for restconf api, default is 443
@@ -299,10 +299,10 @@ Options:
   -d, --data TEXT            Playload to be sent for POST, PUT and PATCH
                              methods
 
-  -c, --content-type TEXT    Content-Type hearder for restconf api, default is
+  -c, --content-type TEXT    Content-Type header for restconf api, default is
                              application/yang-data+json
 
-  -a, --accept TEXT          Accept hearder for restconf api, default is
+  -a, --accept TEXT          Accept header for restconf api, default is
                              application/yang-data+json
 
   -pn, --port INTEGER        Port number for restconf api, default is 443
@@ -336,10 +336,10 @@ Options:
   --password TEXT          Password for restconf api
   -p, --path TEXT          Path for restconf api call  [required]
   -pn, --port INTEGER      Port number for restconf api, default is 443
-  -a, --accept TEXT        Accept hearder for restconf api, default is
+  -a, --accept TEXT        Accept header for restconf api, default is
                            application/yang-data+json
 
-  -c, --content-type TEXT  Content-Type hearder for restconf api, default is
+  -c, --content-type TEXT  Content-Type header for restconf api, default is
                            application/yang-data+json
 
   -h, --help               Show this message and exit.

@@ -5,6 +5,7 @@ tests/__pycache__
 restconf_cli.egg-info/*
 *.json
 *.xml
+.venv/
 
 # Distribution / packaging
 .Python
