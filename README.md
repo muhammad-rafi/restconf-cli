@@ -1,6 +1,6 @@
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/muhammad-rafi/restconf-cli)
-[![Build Status](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/main.yaml/badge.svg)](https://github.com/muhammad-rafi/restconf-cli/actions)
-[![Release Status](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/release.yaml/badge.svg)](https://github.com/muhammad-rafi/restconf-cli/actions)
+[![Build Status](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/main.yaml/badge.svg)](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/main.yaml)
+[![Release Status](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/release.yaml/badge.svg)](https://github.com/muhammad-rafi/restconf-cli/actions/workflows/release.yaml)
 [![Pypi](https://img.shields.io/pypi/v/restconf-cli.svg)](https://pypi.org/project/restconf-cli/) 
 
 # RESTCONF Command Line Interface (restconf-cli)
