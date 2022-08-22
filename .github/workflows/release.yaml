@@ -24,10 +24,9 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - Fixed typos in the code
-            - Added Status code to be displayed for GET command.
-            - Added file name to be appeared 
-              on the terminal when --output flag is supplied.
+              Thanks to Nick Miles for first pull 
+              request to fixed the following;
+              - Typo Fixes, Minor Syntax Changes
           draft: false
           prerelease: false
   deploy:
